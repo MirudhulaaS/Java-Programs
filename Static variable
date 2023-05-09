@@ -1,0 +1,18 @@
+public class Main
+{
+    static int c = 30;          //has to be declared as static outside the method
+    
+    public static void method(){
+        int b = 20;
+        //System.out.println(a);    not declared inside the scope
+        System.out.println(b);      //20
+        System.out.println(c);      //30
+    }
+	public static void main(String[] args) {
+	    int a = 10;
+	    method();
+		System.out.println(a);      //10
+		//System.out.println(b);    not declared inside the scope
+		System.out.println(c);      //30
+	}
+}
