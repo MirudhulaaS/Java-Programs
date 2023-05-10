@@ -1,0 +1,29 @@
+// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
+// then press Enter. You can now see whitespace characters in your code.
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the value1: ");
+        int a = sc.nextInt();
+        System.out.print("Enter the value2: ");
+        int b = sc.nextInt();
+        System.out.println("1. ADD\n2. SUBRACT \n3. MULTIPLY \n4. DIVIDE");
+        System.out.print("Enter the Operation number: ");
+        int n = sc.nextInt();
+        switch(n){
+            case 1:
+                System.out.print("Result = " +  (a+b));
+                break;
+            case 2:
+                System.out.print("Result = " +  (a-b));
+                break;
+            case 3:
+                System.out.print("Result = " +  (a*b));
+                break;
+            case 4:
+                System.out.print("Result = " +  (a/b));
+                break;
+        }
+    }
+}
