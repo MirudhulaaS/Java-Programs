@@ -1,0 +1,20 @@
+import java.util.*;
+public class Main
+{
+    public static int maxArea(int height[]) {
+        int size = height.length;
+        int maxi=0;
+        int water;
+        for(int i=0; i<size; i++){
+            for(int j=i+1; j<size; j++){
+                water = Math.min(height[j],height[i]) * Math.abs(i-j);
+                maxi = Math.max(maxi,water);
+            }
+        }
+        return maxi;    
+    }
+	public static void main(String[] args) {
+	    int arr[] = {1,8,6,2,5,4,8,3,7};
+		System.out.println(maxArea(arr));
+	}
+}
