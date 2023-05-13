@@ -1,0 +1,34 @@
+import java.util.*;
+import java.io.*;
+public class Main {
+    public static String StringChallenge(String str, String token){
+        StringBuilder sb = new StringBuilder();
+        //str = str + token;
+        for(int i=0; i<str.length(); i++){
+            char c = str.charAt(i);
+            if(token.contains(Character.toString(c)))
+                sb.append("--" + c + "--");
+            else sb.append(c);
+        }
+        return sb.toString();
+    }
+    public static String FindMaxLength(String str) {
+        String[] words = str.split("\\W+");
+        String maxString = "";
+        String token = "8l98fmg2ad1";
+        for(String word: words){
+            if(word.matches("[a-zA-Z0-9]+") && word.length() > maxString.length())
+                maxString = word;
+        }
+        return StringChallenge(maxString, token);
+    }
+
+    public static void main(String[] args) {
+        String str = "I love dogs";
+        String str1 = "Fun!! $time";
+        System.out.println(FindMaxLength(str));
+        System.out.println(FindMaxLength(str1));
+    }
+}
+
+
