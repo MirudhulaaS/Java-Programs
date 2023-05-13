@@ -1,0 +1,39 @@
+import java.util.*;
+import java.io.*;
+
+public class Main {
+    public static void main(String[] args) {
+        String input = "aabbcde";
+        System.out.println(convertString(input));
+    }
+    public static String convertString(String input){
+        StringBuilder sb = new StringBuilder();
+        int count = 1;
+        for(int i=1; i<input.length(); i++) {
+            if (input.charAt(i) == input.charAt(i - 1)) {
+                count++;
+            } else {
+                sb.append(count).append(input.charAt(i - 1));
+                count = 1;
+            }
+        }
+        input = sb.toString();
+        String token = "8l98fmg2ad1";
+        return replaceString(input, token);
+    }
+
+    public static String replaceString(String input, String token){
+        StringBuilder sb = new StringBuilder();
+
+        for(int i=0; i<input.length(); i++){
+            char c = input.charAt(i);
+            if(token.contains(Character.toString(c))){
+                sb.append("--" + c + "--");
+            }
+            else
+                sb.append(c);
+        }
+        return sb.toString();
+    }
+
+}
