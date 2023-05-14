@@ -1,0 +1,22 @@
+import java.util.*;
+import java.util.*;
+class Student{
+    int id;
+    String name;
+    public void getName(int id, String name){
+        this.id = id;
+        this.name = name;
+        System.out.println(id + " " + name);
+    }
+    public void putName(int id, String name){
+        System.out.println(id + " " + name);
+    }
+}
+
+class Main{
+    public static void main(String []args){
+        Student s = new Student();
+        s.getName(264, "Ronnie");
+        s.putName(264, "Ronnie");
+    }
+}
