@@ -1,0 +1,26 @@
+import java.util.*;
+import java.util.*;
+
+class Main{
+    public static void main(String []args){
+        String str = "Rhythm!!";
+        System.out.println("Original String: "+ str);
+        System.out.println("Vowel Present: " + vowelPresent(str));
+    }
+
+    public static boolean vowelPresent(String str){
+        String input = str; 
+        String vowel = "aeiouAEIOU";
+        int f = 0;
+        for(int i=0; i<input.length(); i++) {
+            char c = input.charAt(i);
+            if (vowel.contains(Character.toString(c))) {
+                f = 1;
+                break;
+            }
+        }
+        if(f == 1)
+            return true;
+        return false;
+    }
+}
