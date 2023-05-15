@@ -1,0 +1,30 @@
+import java.util.*;
+import java.util.*;
+
+class Main{
+    public static void main(String []args){
+        Scanner sc = new Scanner(System.in);
+        System.out.println("PROGRAM TO FIND LARGEST OF THREE NUMBERS\n");
+        System.out.print("Enter num 1: ");
+        int num1 = sc.nextInt();
+        System.out.print("Enter num 2: ");
+        int num2 = sc.nextInt();
+        System.out.print("Enter num 3: ");
+        int num3 = sc.nextInt();
+        System.out.println("Num1 = " + num1);
+        System.out.println("Num2 = " + num2);
+        System.out.println("Num3 = " + num3);
+        System.out.println("The Largest  of the three numbers = " + findLargestNum(num1, num2, num3));
+    }
+
+    public static int findLargestNum(int n1, int n2, int n3){
+        int result;
+        if(n1 >= n2 && n1 >= n3)
+            result = n1;
+        else if(n2 >= n1 && n2 >= n3)
+            result = n2;
+        else
+            result = n3;
+        return result;
+    }
+}
