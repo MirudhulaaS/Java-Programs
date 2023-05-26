@@ -1,1 +1,36 @@
+import java.util.*; 
+import java.io.*;
 
+class Main {
+  public static String ReplaceString(String str, String token){
+    StringBuilder sb = new StringBuilder();
+    for(int i=0; i<str.length(); i++){
+      char c = str.charAt(i);
+      if(token.contains(Character.toString(c)))
+        continue;
+      else sb.append(c);
+    }
+    return sb.toString();
+  }
+
+  public static String StringChallenge(String sen) {
+    // code goes here  
+      String token = "s1otw2b";
+      String[] word = sen.split("\\W+");
+      String longest = word[0];
+      for(int i=0; i<word.length; i++){
+        if(word[i].length() > longest.length()){
+          longest = word[i];
+        }
+      }
+      
+      return ReplaceString(longest, token);
+  }
+
+  public static void main (String[] args) {  
+    // keep this function call here     
+    Scanner s = new Scanner(System.in);
+    System.out.print(StringChallenge(s.nextLine())); 
+  }
+
+}
